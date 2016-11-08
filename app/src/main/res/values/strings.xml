@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Bits Emergency</string>
+    <string name="importantcontactbt">Important Contacts</string>
+    <string name="complainbt">Complain and suggestion</string>
+    <string name="medcbt">Med. C. Timings</string>
+    <string name="secembt">Security \n Emergency</string>
+    <string name="medembt">Medical \n Emergency</string>
+    <string name="title_activity_important__contacts">Important_Contacts</string>
+        <string name="title_activity_main2">Main2Activity</string>
+
+    <string name="action_credits">Credits</string>
+
+    <string name="hello_world">Hello world!</string>
+    <!-- -
+        This is an ad unit ID for a banner test ad. Replace with your own banner ad unit id.
+        For more information, see https://support.google.com/admob/answer/3052638
+    <!- -->
+    <string name="banner_ad_unit_id">ca-app-pub-3940256099942544/6300978111</string>
+        <string name="title_activity_main3">Main3Activity</string>
+</resources>
