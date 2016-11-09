@@ -22,6 +22,7 @@
         <activity android:name=".Complain_Suggestions" />
         <activity android:name=".Medc_Timings" />
         <activity android:name=".Important_Contacts" />
+        <activity android:name=".Credits" />
         <!-- This meta-data tag is required to use Google Play Services. -->
         <meta-data
             android:name="com.google.android.gms.version"
@@ -32,7 +33,8 @@
             android:name="com.google.android.gms.ads.AdActivity"
             android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
             android:theme="@android:style/Theme.Translucent" />
-        <activity android:name=".Credits"></activity>
+        <activity android:name=".Emergency_Protocol" />
+        <activity android:name=".Protocol"></activity>
     </application>
 
 </manifest>

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Bits Emergency</string>
+    <string name="app_name">BITS Emergency</string>
     <string name="importantcontactbt">Important Contacts</string>
     <string name="complainbt">Complain and suggestion</string>
     <string name="medcbt">Med. C. Timings</string>
@@ -16,5 +16,9 @@
         For more information, see https://support.google.com/admob/answer/3052638
     <!- -->
     <string name="banner_ad_unit_id">ca-app-pub-3940256099942544/6300978111</string>
-        <string name="title_activity_main3">Main3Activity</string>
+    <string name="emergencyprotocolbt">Emergency Protocol</string>
+    <string name="Medical_Protocol">Medical Emergency</string>
+    <string name="Lockdown_Protocol">Lockdown</string>
+    <string name="Fire_Protocol">Fire Emergency</string>
+    <string name="Violent_Protocol">Violent/Suspicious Act</string>
 </resources>

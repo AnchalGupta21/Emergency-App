@@ -88,21 +88,24 @@ public class Important_Contacts extends AppCompatActivity {
 
                                 Adaptersetup();
                             }
-                                break;
+                            break;
                             case 1:
                             {
                                 name = new ArrayList<>();
+                                name.add("J S Rathore");
                                 name.add("Mr. Samunder Singh");
 
                                 post = new ArrayList<>();
+                                post.add("Warden");
                                 post.add("Hostel Superintendents");
 
                                 number = new ArrayList<>();
+                                number.add("+91-9694096472");
                                 number.add("+91-9694096473");
 
                                 Adaptersetup();
                             }
-                                break;
+                            break;
                             case 2:
                             {
                                 name = new ArrayList<>();
@@ -122,7 +125,7 @@ public class Important_Contacts extends AppCompatActivity {
 
                                 Adaptersetup();
                             }
-                                break;
+                            break;
                             case 3:
                             {
                                 name = new ArrayList<>();
@@ -142,7 +145,7 @@ public class Important_Contacts extends AppCompatActivity {
 
                                 Adaptersetup();
                             }
-                                break;
+                            break;
                             case 4:
                             {
                                 name = new ArrayList<>();
@@ -162,7 +165,7 @@ public class Important_Contacts extends AppCompatActivity {
 
                                 Adaptersetup();
                             }
-                                break;
+                            break;
                             case 5:
                             {
                                 name = new ArrayList<>();
@@ -182,7 +185,7 @@ public class Important_Contacts extends AppCompatActivity {
 
                                 Adaptersetup();
                             }
-                                break;
+                            break;
                             case 6:
                             {
                                 name = new ArrayList<>();
@@ -208,7 +211,7 @@ public class Important_Contacts extends AppCompatActivity {
 
                                 Adaptersetup();
                             }
-                                break;
+                            break;
                             case 7:
                             {
                                 name = new ArrayList<>();
@@ -234,7 +237,7 @@ public class Important_Contacts extends AppCompatActivity {
 
                                 Adaptersetup();
                             }
-                                break;
+                            break;
                             case 8:
                             {
                                 name = new ArrayList<>();
@@ -254,7 +257,7 @@ public class Important_Contacts extends AppCompatActivity {
 
                                 Adaptersetup();
                             }
-                                break;
+                            break;
                             case 9:
                             {
                                 name = new ArrayList<>();
@@ -274,7 +277,7 @@ public class Important_Contacts extends AppCompatActivity {
 
                                 Adaptersetup();
                             }
-                                break;
+                            break;
                             case 10:
                             {
                                 name = new ArrayList<>();
@@ -294,7 +297,7 @@ public class Important_Contacts extends AppCompatActivity {
 
                                 Adaptersetup();
                             }
-                                break;
+                            break;
                             case 11:
                             {
                                 name = new ArrayList<>();
@@ -314,7 +317,7 @@ public class Important_Contacts extends AppCompatActivity {
 
                                 Adaptersetup();
                             }
-                                break;
+                            break;
                             case 12:
                             {
                                 name = new ArrayList<>();
@@ -331,7 +334,7 @@ public class Important_Contacts extends AppCompatActivity {
 
                                 Adaptersetup();
                             }
-                                break;
+                            break;
                             case 13:
                             {
                                 name = new ArrayList<>();
@@ -351,7 +354,7 @@ public class Important_Contacts extends AppCompatActivity {
 
                                 Adaptersetup();
                             }
-                                break;
+                            break;
                         }
                     }
                 }
@@ -385,4 +388,3 @@ public class Important_Contacts extends AppCompatActivity {
 
 
 }
-

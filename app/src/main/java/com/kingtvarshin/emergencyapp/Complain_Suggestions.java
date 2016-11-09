@@ -10,7 +10,6 @@ import android.widget.EditText;
 
 public class Complain_Suggestions extends AppCompatActivity {
 
-    Drawable bits;
     Button complain;
     EditText complainet;
     String text;
@@ -19,14 +18,11 @@ public class Complain_Suggestions extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_complain_suggestions);
-        bits = getResources().getDrawable(R.drawable.bits);
-        bits.setAlpha(100);
 
         complain =(Button)findViewById(R.id.complainsend);
         complainet =(EditText)findViewById(R.id.complain_et);
 
         text = complainet.getText().toString();
-
 
         complain.setOnClickListener(
                 new View.OnClickListener() {
@@ -42,6 +38,6 @@ public class Complain_Suggestions extends AppCompatActivity {
                 }
         );
 
-
     }
+
 }

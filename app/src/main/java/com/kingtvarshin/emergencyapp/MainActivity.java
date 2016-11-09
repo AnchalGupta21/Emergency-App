@@ -14,7 +14,7 @@ public class MainActivity extends AppCompatActivity {
 
     Drawable bits;
     Button medicalcall,securitycall;
-    Button importantcontact,complain,medctiming;
+    Button importantcontact,complain,medctiming,emergencyprotoc;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
         importantcontact = (Button)findViewById(R.id.bt_importantcontact);
         complain = (Button)findViewById(R.id.bt_complainsuggestion);
         medctiming = (Button)findViewById(R.id.bt_medctiming);
+        emergencyprotoc = (Button)findViewById(R.id.bt_emergencyprotocol);
 
 
         securitycall.setOnClickListener(
@@ -48,6 +49,15 @@ public class MainActivity extends AppCompatActivity {
                 }
         );
 
+        emergencyprotoc.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        startActivity(new Intent(MainActivity.this,Emergency_Protocol.class));
+                    }
+                }
+        );
+
         importantcontact.setOnClickListener(
                 new View.OnClickListener() {
                     @Override
@@ -61,7 +71,13 @@ public class MainActivity extends AppCompatActivity {
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        startActivity(new Intent(MainActivity.this,Complain_Suggestions.class));
+//                        startActivity(new Intent(MainActivity.this,Complain_Suggestions.class));
+                        Intent emailintent1 = new Intent(Intent.ACTION_SEND);
+                        emailintent1.putExtra(Intent.EXTRA_EMAIL, new String[] {"smac.bitspilani@gmail.com"});
+                        emailintent1.putExtra(Intent.EXTRA_SUBJECT,"Complains_and_Suggestions_from_app");
+//                        emailintent1.putExtra(Intent.EXTRA_TEXT, text);
+                        emailintent1.setType("message/rfc882");
+                        startActivity(Intent.createChooser(emailintent1, "Email"));
                     }
                 }
         );
