@@ -26,7 +26,7 @@ import static java.security.AccessController.getContext;
 public class Important_Contacts extends AppCompatActivity {
 
 
-    Drawable bits;
+//    Drawable bits;
     private ArrayList<String> name;
     private ArrayList<String> post;
     private ArrayList<String> number;
@@ -37,8 +37,8 @@ public class Important_Contacts extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_important_contacts);
-        bits = getResources().getDrawable(R.drawable.bits);
-        bits.setAlpha(100);
+//        bits = getResources().getDrawable(R.drawable.bits);
+//        bits.setAlpha(100);
 
         // Load an ad into the AdMob banner view.
         AdView adView = (AdView) findViewById(R.id.adView);

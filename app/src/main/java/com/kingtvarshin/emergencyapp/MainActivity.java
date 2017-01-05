@@ -12,7 +12,7 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
-    Drawable bits;
+//    Drawable bits;
     Button medicalcall,securitycall;
     Button importantcontact,complain,medctiming,emergencyprotoc;
 
@@ -20,8 +20,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        bits = getResources().getDrawable(R.drawable.bits);
-        bits.setAlpha(100);
+//        bits = getResources().getDrawable(R.drawable.bits);
+//        bits.setAlpha(100);
 
         securitycall = (Button)findViewById(R.id.bt_security);
         medicalcall = (Button)findViewById(R.id.bt_medical);

@@ -10,64 +10,79 @@
     android:paddingTop="6dp"
     tools:context="com.kingtvarshin.emergencyapp.MainActivity"
     android:background="#f0f0f0">
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_margin="4dp"
-        android:layout_above="@+id/bottomemer">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_above="@+id/bottomemer"
+            android:layout_margin="4dp">
 
-            <Button
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/bt_emergencyprotocol"
-                android:drawableTop="@drawable/emergencycontacts"
-                android:text="@string/emergencyprotocolbt"
-                android:textSize="15sp"
-                android:padding="6dp"
-                android:layout_margin="6dp"
-                android:background="@color/bg" />
+                android:layout_height="0dp"
+                android:layout_weight=".5"
+                android:orientation="horizontal">
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".5"
+                    android:id="@+id/bt_emergencyprotocol"
+                    android:drawableTop="@drawable/contacts"
+                    android:text="@string/emergencyprotocolbt"
+                    android:textSize="15sp"
+                    android:padding="6dp"
+                    android:layout_margin="6dp"
+                    android:background="@drawable/iconshape" />
 
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/bt_importantcontact"
-                android:drawableTop="@drawable/emergencycontacts"
-                android:text="@string/importantcontactbt"
-                android:textSize="15sp"
-                android:padding="6dp"
-                android:layout_margin="6dp"
-                android:background="@color/bg" />
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".5"
+                    android:drawableTop="@drawable/contacts"
+                    android:id="@+id/bt_importantcontact"
+                    android:text="@string/importantcontactbt"
+                    android:textSize="15sp"
+                    android:padding="6dp"
+                    android:layout_margin="6dp"
+                    android:background="@drawable/iconshape" />
+            </LinearLayout>
 
-            <Button
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/bt_medctiming"
-                android:drawableTop="@drawable/medc"
-                android:text="@string/medcbt"
-                android:textSize="15sp"
-                android:padding="6dp"
-                android:layout_margin="6dp"
-                android:background="@color/bg"
-                />
+                android:layout_height="0dp"
+                android:layout_weight=".5"
+                android:orientation="horizontal">
 
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/bt_complainsuggestion"
-                android:drawableTop="@drawable/complain"
-                android:text="@string/complainbt"
-                android:textSize="15sp"
-                android:padding="6dp"
-                android:layout_margin="6dp"
-                android:background="@color/bg"
-                />
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".5"
+                    android:id="@+id/bt_medctiming"
+                    android:drawableTop="@drawable/medc"
+                    android:text="@string/medcbt"
+                    android:textSize="15sp"
+                    android:padding="6dp"
+                    android:layout_margin="6dp"
+                    android:background="@drawable/iconshape"
+                    />
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".5"
+                    android:id="@+id/bt_complainsuggestion"
+                    android:drawableTop="@drawable/complaint"
+                    android:text="@string/complainbt"
+                    android:textSize="15sp"
+                    android:padding="6dp"
+                    android:layout_margin="6dp"
+                    android:background="@drawable/iconshape"
+                    />
+            </LinearLayout>
+
+
         </LinearLayout>
-    </ScrollView>
 
 
     <LinearLayout
