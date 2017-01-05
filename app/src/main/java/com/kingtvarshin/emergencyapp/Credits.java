@@ -19,10 +19,6 @@ import java.util.ArrayList;
 
 public class Credits extends AppCompatActivity {
 
-    // Remove the below line after defining your own ad unit ID.
-    private static final String TOAST_TEXT = "Test ads are being shown. "
-            + "To show live ads, replace the ad unit ID in res/values/strings.xml with your own ad unit ID.";
-
     private ArrayList<String> name2;
     private Context context;
     ListView lv2;
@@ -40,10 +36,8 @@ public class Credits extends AppCompatActivity {
                 .setRequestAgent("android_studio:ad_template").build();
         adView.loadAd(adRequest);
 
-        // Toasts the test ad message on the screen. Remove this after defining your own ad unit ID.
-        Toast.makeText(this, TOAST_TEXT, Toast.LENGTH_LONG).show();
-
         name2 = new ArrayList<>();
+        name2.add("\nAn initiative by Safety & Medical Advisory Council\n(SMAC)\n");
         name2.add("Bikram Singh Bisth");
         name2.add("Harshita Goel");
         name2.add("Manan Singhal");

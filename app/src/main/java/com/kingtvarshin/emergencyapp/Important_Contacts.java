@@ -25,9 +25,6 @@ import static java.security.AccessController.getContext;
 
 public class Important_Contacts extends AppCompatActivity {
 
-    // Remove the below line after defining your own ad unit ID.
-    private static final String TOAST_TEXT = "Test ads are being shown. "
-            + "To show live ads, replace the ad unit ID in res/values/strings.xml with your own ad unit ID.";
 
     Drawable bits;
     private ArrayList<String> name;
@@ -48,9 +45,6 @@ public class Important_Contacts extends AppCompatActivity {
         AdRequest adRequest = new AdRequest.Builder()
                 .setRequestAgent("android_studio:ad_template").build();
         adView.loadAd(adRequest);
-
-        // Toasts the test ad message on the screen. Remove this after defining your own ad unit ID.
-        Toast.makeText(this, TOAST_TEXT, Toast.LENGTH_LONG).show();
 
         lv = (ListView)findViewById(R.id.list_importantcontacts);
 

@@ -36,7 +36,7 @@ public class Protocol extends AppCompatActivity {
         }
 
         emergency = (Button)findViewById(R.id.emergencybt);
-        emergency.setText(newString + " Emergency");
+        emergency.setText("Emergency");
         emergency.setOnClickListener(
                 new View.OnClickListener() {
                     @Override

@@ -8,7 +8,8 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.kingtvarshin.emergencyapp.Protocol">
+    tools:context="com.kingtvarshin.emergencyapp.Protocol"
+    android:background="#f0f0f0">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -26,7 +27,6 @@
         android:layout_height="wrap_content"
         android:id="@+id/emergencybt"
         android:layout_alignParentBottom="true"
-        android:drawableTop="@mipmap/ic_launcher"
         android:text="bla"
         android:textColor="#ffffffff"
         android:textSize="20sp"

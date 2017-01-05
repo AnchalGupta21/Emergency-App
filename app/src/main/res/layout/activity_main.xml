@@ -4,16 +4,16 @@
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingBottom="0dp"
     android:paddingLeft="0dp"
     android:paddingRight="0dp"
-    android:paddingTop="8dp"
+    android:paddingTop="6dp"
     tools:context="com.kingtvarshin.emergencyapp.MainActivity"
     android:background="#f0f0f0">
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_margin="16dp"
+        android:layout_margin="4dp"
         android:layout_above="@+id/bottomemer">
 
         <LinearLayout
@@ -28,8 +28,8 @@
                 android:drawableTop="@drawable/emergencycontacts"
                 android:text="@string/emergencyprotocolbt"
                 android:textSize="15sp"
-                android:padding="8dp"
-                android:layout_margin="8dp"
+                android:padding="6dp"
+                android:layout_margin="6dp"
                 android:background="@color/bg" />
 
             <Button
@@ -38,22 +38,10 @@
                 android:id="@+id/bt_importantcontact"
                 android:drawableTop="@drawable/emergencycontacts"
                 android:text="@string/importantcontactbt"
-                android:textSize="16sp"
-                android:padding="9dp"
-                android:layout_margin="8dp"
-                android:background="@color/bg" />
-
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/bt_complainsuggestion"
-                android:drawableTop="@drawable/complain"
-                android:text="@string/complainbt"
                 android:textSize="15sp"
-                android:padding="8dp"
-                android:layout_margin="8dp"
-                android:background="@color/bg"
-                />
+                android:padding="6dp"
+                android:layout_margin="6dp"
+                android:background="@color/bg" />
 
             <Button
                 android:layout_width="match_parent"
@@ -62,8 +50,20 @@
                 android:drawableTop="@drawable/medc"
                 android:text="@string/medcbt"
                 android:textSize="15sp"
-                android:padding="8dp"
-                android:layout_margin="8dp"
+                android:padding="6dp"
+                android:layout_margin="6dp"
+                android:background="@color/bg"
+                />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/bt_complainsuggestion"
+                android:drawableTop="@drawable/complain"
+                android:text="@string/complainbt"
+                android:textSize="15sp"
+                android:padding="6dp"
+                android:layout_margin="6dp"
                 android:background="@color/bg"
                 />
         </LinearLayout>
@@ -92,10 +92,8 @@
             android:paddingStart="0dp"
             android:paddingEnd="8dp"
             android:layout_margin="4dp"
-            android:layout_marginLeft="0dp"
             android:background="@drawable/roundedbutton"
             android:layout_gravity="bottom"
-            android:elevation="5dp"
             android:textColor="#ffffff"
 
             />
@@ -115,7 +113,6 @@
             android:layout_margin="4dp"
             android:background="@drawable/leftroundedbutton"
             android:layout_gravity="bottom"
-            android:elevation="5dp"
             android:textColor="#ffffff"
             />
 

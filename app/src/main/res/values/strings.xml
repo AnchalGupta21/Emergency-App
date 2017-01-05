@@ -15,10 +15,10 @@
         This is an ad unit ID for a banner test ad. Replace with your own banner ad unit id.
         For more information, see https://support.google.com/admob/answer/3052638
     <!- -->
-    <string name="banner_ad_unit_id">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="banner_ad_unit_id">ca-app-pub-7380229019752156/3465404822</string>
     <string name="emergencyprotocolbt">Emergency Protocol</string>
-    <string name="Medical_Protocol">Medical Emergency</string>
+    <string name="Medical_Protocol">Medical \n Emergency</string>
     <string name="Lockdown_Protocol">Lockdown</string>
     <string name="Fire_Protocol">Fire Emergency</string>
-    <string name="Violent_Protocol">Violent/Suspicious Act</string>
+    <string name="Violent_Protocol">Violent/\nSuspicious Act</string>
 </resources>
