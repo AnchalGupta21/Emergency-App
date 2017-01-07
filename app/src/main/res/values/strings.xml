@@ -1,10 +1,10 @@
 <resources>
     <string name="app_name">BITS Emergency</string>
-    <string name="importantcontactbt">Important Contacts</string>
-    <string name="complainbt">Complain and suggestion</string>
-    <string name="medcbt">Med. C. Timings</string>
-    <string name="secembt">Security \n Emergency</string>
-    <string name="medembt">Medical \n Emergency</string>
+    <string name="importantcontactbt">Important\nContacts</string>
+    <string name="complainbt">Complain &amp;\nsuggestion</string>
+    <string name="medcbt">Med. C.\nTimings</string>
+    <string name="secembt">Security\nEmergency</string>
+    <string name="medembt">Medical\nEmergency</string>
     <string name="title_activity_important__contacts">Important_Contacts</string>
         <string name="title_activity_main2">Main2Activity</string>
 
@@ -16,8 +16,8 @@
         For more information, see https://support.google.com/admob/answer/3052638
     <!- -->
     <string name="banner_ad_unit_id">ca-app-pub-7380229019752156/3465404822</string>
-    <string name="emergencyprotocolbt">Emergency Protocol</string>
-    <string name="Medical_Protocol">Medical \n Emergency</string>
+    <string name="emergencyprotocolbt">Emergency\nProtocols</string>
+    <string name="Medical_Protocol">Medical\nEmergency</string>
     <string name="Lockdown_Protocol">Lockdown</string>
     <string name="Fire_Protocol">Fire Emergency</string>
     <string name="Violent_Protocol">Violent/\nSuspicious Act</string>

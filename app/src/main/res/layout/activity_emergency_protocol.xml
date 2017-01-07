@@ -27,6 +27,7 @@
                     android:layout_weight="1"
                     android:text="@string/Medical_Protocol"
                     android:id="@+id/medical_protocol"
+                    android:padding="30dp"
                     android:drawableTop="@drawable/pharmacy"
                     />
 
@@ -37,6 +38,7 @@
                     android:text="@string/Lockdown_Protocol"
                     android:id="@+id/lockdown_protocol"
                     android:drawableTop="@drawable/lock"
+                    android:padding="30dp"
                     />
             </LinearLayout>
 
@@ -51,6 +53,7 @@
                     android:text="@string/Violent_Protocol"
                     android:id="@+id/violent_protocol"
                     android:drawableTop="@drawable/exclamation"
+                    android:padding="30dp"
                     android:layout_weight="1"/>
                 <Button
                     android:layout_width="match_parent"
@@ -58,6 +61,7 @@
                     android:text="@string/Fire_Protocol"
                     android:id="@+id/fire_protocol"
                     android:drawableTop="@drawable/fire"
+                    android:padding="30dp"
                     android:layout_weight="1"/>
             </LinearLayout>
         </LinearLayout>
