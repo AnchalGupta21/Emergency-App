@@ -11,13 +11,13 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight=".5"
-        android:src="@mipmap/ic_launcher" />
+        android:src="@drawable/smaclogo" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Bits Emergency App."
-        android:textSize="30dp"/>
+        android:textSize="30sp"/>
 
     <com.wang.avi.AVLoadingIndicatorView
         android:layout_width="wrap_content"
@@ -32,5 +32,5 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Initiation By SMAC"
-        android:textSize="30dp"/>
+        android:textSize="30sp"/>
 </LinearLayout>
