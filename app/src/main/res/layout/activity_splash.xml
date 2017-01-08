@@ -4,33 +4,45 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center"
     android:weightSum="1">
 
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight=".5"
+        android:layout_weight=".6"
         android:src="@drawable/smaclogo" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Bits Emergency App."
-        android:textSize="30sp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight=".4"
+        android:orientation="vertical"
+        android:gravity="center"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Bits Emergency App."
+            android:textSize="30sp"
+            android:gravity="center"/>
 
-    <com.wang.avi.AVLoadingIndicatorView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:indicatorName="BallClipRotatePulseIndicator"
-        style="@style/AVLoadingIndicatorView.Large"
-        android:id="@+id/avi"
-        app:indicatorColor="#c83535"
-           />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Initiation By SMAC"
+            android:layout_margin="5dp"
+            android:textSize="20sp"
+            android:gravity="center"/>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Initiation By SMAC"
-        android:textSize="30sp"/>
+        <com.wang.avi.AVLoadingIndicatorView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:indicatorName="BallClipRotatePulseIndicator"
+            style="@style/AVLoadingIndicatorView.Large"
+            android:id="@+id/avi"
+            app:indicatorColor="#c83535"
+            />
+    </LinearLayout>
+
+
 </LinearLayout>
