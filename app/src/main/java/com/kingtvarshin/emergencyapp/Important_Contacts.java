@@ -40,12 +40,6 @@ public class Important_Contacts extends AppCompatActivity {
 //        bits = getResources().getDrawable(R.drawable.bits);
 //        bits.setAlpha(100);
 
-        // Load an ad into the AdMob banner view.
-        AdView adView = (AdView) findViewById(R.id.adView);
-        AdRequest adRequest = new AdRequest.Builder()
-                .setRequestAgent("android_studio:ad_template").build();
-        adView.loadAd(adRequest);
-
         lv = (ListView)findViewById(R.id.list_importantcontacts);
 
         String[] SPINNERLIST = {"AK", "BD", "BG", "CVR","GN","KR","ML","MR","RM","RP","SK","SR","VK","VY"};

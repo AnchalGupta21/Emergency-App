@@ -30,11 +30,6 @@ public class Credits extends AppCompatActivity {
 
         lv2 = (ListView)findViewById(R.id.lvsmaccredits);
 
-        // Load an ad into the AdMob banner view.
-        AdView adView = (AdView) findViewById(R.id.adView);
-        AdRequest adRequest = new AdRequest.Builder()
-                .setRequestAgent("android_studio:ad_template").build();
-        adView.loadAd(adRequest);
 
         name2 = new ArrayList<>();
         name2.add("\nAn initiative by Safety & Medical Advisory Council\n(SMAC)\n");
