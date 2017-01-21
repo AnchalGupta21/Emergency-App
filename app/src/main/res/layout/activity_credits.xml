@@ -24,16 +24,4 @@
             android:id="@+id/lvsmaccredits"/>
     </LinearLayout>
 
-    <com.google.android.gms.ads.AdView
-        android:id="@+id/adView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        ads:adSize="BANNER"
-        ads:adUnitId="@string/banner_ad_unit_id"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
-
-
 </RelativeLayout>
