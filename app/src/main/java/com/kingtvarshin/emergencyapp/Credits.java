@@ -10,8 +10,6 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.Toast;
 
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdView;
 import com.kingtvarshin.emergencyapp.Adapter.Contactus_listAdapter;
 import com.kingtvarshin.emergencyapp.Adapter.Credits_listAdapter;
 

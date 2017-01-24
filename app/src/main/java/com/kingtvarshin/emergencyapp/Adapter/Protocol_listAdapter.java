@@ -43,9 +43,9 @@ public class Protocol_listAdapter extends BaseAdapter {
     @Override
     public View getView(int position, View convertView, ViewGroup viewGroup) {
         LayoutInflater inflater = (LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        View row = inflater.inflate(R.layout.listitem_credits, viewGroup, false);
+        View row = inflater.inflate(R.layout.listitem_protocol, viewGroup, false);
 
-        TextView nname = (TextView) row.findViewById(R.id.creditnametv);
+        TextView nname = (TextView) row.findViewById(R.id.protocolnametv);
 
         nname.setText(protocol.get(position));
 

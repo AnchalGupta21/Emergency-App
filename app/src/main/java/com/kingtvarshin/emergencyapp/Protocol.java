@@ -9,6 +9,7 @@ import android.widget.Button;
 import android.widget.ListView;
 
 import com.kingtvarshin.emergencyapp.Adapter.Credits_listAdapter;
+import com.kingtvarshin.emergencyapp.Adapter.Protocol_listAdapter;
 
 import java.util.ArrayList;
 
@@ -83,7 +84,7 @@ public class Protocol extends AppCompatActivity {
         }
 
         l = (ListView)findViewById(R.id.protocols);
-        l.setAdapter(new Credits_listAdapter(Protocol.this,protocol));
+        l.setAdapter(new Protocol_listAdapter(Protocol.this,protocol));
     }
 
     public void call(String name)

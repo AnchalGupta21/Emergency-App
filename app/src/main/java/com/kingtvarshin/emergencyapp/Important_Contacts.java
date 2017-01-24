@@ -1,44 +1,31 @@
 package com.kingtvarshin.emergencyapp;
 
-import android.content.Context;
 import android.content.Intent;
-import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
-import android.widget.Toast;
 
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdView;
 import com.kingtvarshin.emergencyapp.Adapter.Contactus_listAdapter;
 import com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner;
 
 import java.util.ArrayList;
 
-import static java.security.AccessController.getContext;
 
 public class Important_Contacts extends AppCompatActivity {
 
-
-//    Drawable bits;
     private ArrayList<String> name;
     private ArrayList<String> post;
     private ArrayList<String> number;
-    private Context context;
     ListView lv;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_important_contacts);
-//        bits = getResources().getDrawable(R.drawable.bits);
-//        bits.setAlpha(100);
 
         lv = (ListView)findViewById(R.id.list_importantcontacts);
 
@@ -357,13 +344,10 @@ public class Important_Contacts extends AppCompatActivity {
 
 
     public void Adaptersetup()
-
     {
-
         lv.setAdapter(
                 new Contactus_listAdapter(Important_Contacts.this,name,post,number)
         );
-
         lv.setOnItemClickListener(
                 new AdapterView.OnItemClickListener() {
                     @Override
@@ -373,6 +357,5 @@ public class Important_Contacts extends AppCompatActivity {
                 }
         );
     }
-
 
 }

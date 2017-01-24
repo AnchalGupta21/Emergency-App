@@ -22,14 +22,14 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Bits Emergency App."
+            android:text="BITS Emergency App."
             android:textSize="30sp"
             android:gravity="center"/>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Initiation By SMAC"
+            android:text="By SMAC"
             android:layout_margin="5dp"
             android:textSize="20sp"
             android:gravity="center"/>
