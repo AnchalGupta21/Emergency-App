@@ -17,6 +17,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="logout"
+            android:background="@drawable/iconshape"
+            android:id="@+id/btlogout"/>
         <ListView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
