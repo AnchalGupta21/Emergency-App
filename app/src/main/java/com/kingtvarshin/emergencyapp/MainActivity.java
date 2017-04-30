@@ -1,14 +1,22 @@
 package com.kingtvarshin.emergencyapp;
 
+import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
-import android.graphics.drawable.Drawable;
+import android.graphics.Point;
+import android.graphics.drawable.BitmapDrawable;
 import android.net.Uri;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Gravity;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.LinearLayout;
+import android.widget.PopupWindow;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -71,13 +79,26 @@ public class MainActivity extends AppCompatActivity {
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-//                        startActivity(new Intent(MainActivity.this,Complain_Suggestions.class));
-                        Intent emailintent1 = new Intent(Intent.ACTION_SEND);
-                        emailintent1.putExtra(Intent.EXTRA_EMAIL, new String[] {"smac.bitspilani@gmail.com"});
-                        emailintent1.putExtra(Intent.EXTRA_SUBJECT,"Complains_and_Suggestions_from_app");
-//                        emailintent1.putExtra(Intent.EXTRA_TEXT, text);
-                        emailintent1.setType("message/rfc882");
-                        startActivity(Intent.createChooser(emailintent1, "Email"));
+
+//                        Intent emailintent1 = new Intent(Intent.ACTION_SEND);
+//                        emailintent1.putExtra(Intent.EXTRA_EMAIL, new String[] {"smac.bitspilani@gmail.com"});
+//                        emailintent1.putExtra(Intent.EXTRA_SUBJECT,"Complains_and_Suggestions_from_app");
+//
+//                        emailintent1.setType("message/rfc882");
+//                        startActivity(Intent.createChooser(emailintent1, "Email"));
+                        //Open popup window
+                        final AlertDialog.Builder mBuilder = new AlertDialog.Builder(MainActivity.this);
+                        View mview =getLayoutInflater().inflate(R.layout.activity_alert_girl,null);
+                        mBuilder.setView(mview);
+                        Button call = (Button)mview.findViewById(R.id.btproceed);
+                        call.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                startActivity(new Intent(Intent.ACTION_DIAL, Uri.fromParts("tel", "+91-7023973480", null)));
+                            }
+                        });
+                        AlertDialog dialog =mBuilder.create();
+                        dialog.show();
                     }
                 }
         );
@@ -90,11 +111,21 @@ public class MainActivity extends AppCompatActivity {
                     }
                 }
         );
+    }
 
-
-
-
-
+    @Override
+    public void onBackPressed() {
+//        // Write your code here
+////        startActivity(new Intent(MainActivity.this,MainActivity.class));
+////        finish();
+//        onStop();
+//        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+//        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+//        startActivity(intent);
+//        finish();
+//
+////        super.onBackPressed();
+        moveTaskToBack(true);
     }
 
     @Override
@@ -112,10 +143,11 @@ public class MainActivity extends AppCompatActivity {
         int id = item.getItemId();
 
         if (id == R.id.action_credits) {
-            startActivity(new Intent(MainActivity.this,Credits.class));
+            startActivity(new Intent(MainActivity.this,Complain_Suggestions.class));
             return true;
         }
 
         return super.onOptionsItemSelected(item);
     }
+
 }

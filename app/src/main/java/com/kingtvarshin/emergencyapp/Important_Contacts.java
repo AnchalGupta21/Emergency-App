@@ -26,6 +26,7 @@ public class Important_Contacts extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_important_contacts);
+        setTitle("Important Contacts");
 
         lv = (ListView)findViewById(R.id.list_importantcontacts);
 

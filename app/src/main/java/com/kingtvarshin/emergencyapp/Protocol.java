@@ -52,35 +52,38 @@ public class Protocol extends AppCompatActivity {
 
         if(newString.equals("fire"))
         {
+            setTitle("Fire Protocol");
             protocol = new ArrayList<>();
-            protocol.add("1. Call the emergency number.");
+            protocol.add("1. Click the emergency Button below.");
             protocol.add("2. Activate the fire alarm.");
             protocol.add("3. Remain calm and evacuate the building.");
-            protocol.add("4. If possible and safe, use the fire extinguisher.");
-            protocol.add("5. Don't re-enter until cleared by the authorities");
+            protocol.add("4. If possible, use the fire extinguisher.");
+            protocol.add("5. Don't re-enter the area until it’s cleared by the authorities.");
         }
         else if (newString.equals("medical"))
         {
+            setTitle("Medical Protocol");
             protocol = new ArrayList<>();
-            protocol.add("1. Call the emergency number.");
-            protocol.add("2. Remain calm and follow directions from campus security.");
-            protocol.add("3. For basic medical emergency ask for first aid.");
-            protocol.add("4. In case of a serious emergency, directly contact the ambulance and then contact the campus security.");
+            protocol.add("1. Click the emergency Button below.");
+            protocol.add("2. Remain calm and follow the directions given by campus security.");
+            protocol.add("3. For basic medical emergency, ask for first aid kit.");
+            protocol.add("4. In the case of a serious emergency, directly contact the ambulance then contact the campus security.");
         }
         else if (newString.equals("violent"))
         {
+            setTitle("Violent Protocol");
             protocol = new ArrayList<>();
-            protocol.add("1. Call the emergency number.");
-            protocol.add("2. Describe the nature,location and discription of the incident.");
-            protocol.add("3. Follow directions.");
+            protocol.add("1. Click the emergency Button below.");
+            protocol.add("2. Describe the location & details of the incident.");
+            protocol.add("3. Remain calm and follow the directions given by campus security.");
         }
         else if (newString.equals("lockdown"))
         {
+            setTitle("Lockdown Protocol");
             protocol = new ArrayList<>();
-            protocol.add("1. Call the emergency number.");
-            protocol.add("2. Follow directions from campus security.");
-            protocol.add("3. Remain calm.");
-            protocol.add("4. Try to attract attention.");
+            protocol.add("1. Click the emergency Button below.");
+            protocol.add("2. Remain calm and follow the directions given by campus security.");
+            protocol.add("3. Try to attract attention.");
         }
 
         l = (ListView)findViewById(R.id.protocols);

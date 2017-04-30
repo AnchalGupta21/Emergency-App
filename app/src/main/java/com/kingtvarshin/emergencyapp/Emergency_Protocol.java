@@ -14,6 +14,7 @@ public class Emergency_Protocol extends AppCompatActivity{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_emergency_protocol);
+        setTitle("Emergency Protocol");
 
         fire = (Button)findViewById(R.id.fire_protocol);
         medical = (Button)findViewById(R.id.medical_protocol);

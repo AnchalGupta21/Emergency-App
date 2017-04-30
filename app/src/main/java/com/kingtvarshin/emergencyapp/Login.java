@@ -7,172 +7,162 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.ArrayAdapter;
+import android.widget.AutoCompleteTextView;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Toast;
 
-import com.google.android.gms.auth.api.Auth;
-import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
-import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
-import com.google.android.gms.auth.api.signin.GoogleSignInResult;
-import com.google.android.gms.common.ConnectionResult;
-import com.google.android.gms.common.SignInButton;
-import com.google.android.gms.common.api.GoogleApiClient;
+
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthCredential;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseAuthUserCollisionException;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;
 
 public class Login extends AppCompatActivity {
 
-    SignInButton signinbt;
-    private static final int RC_SIGN_IN = 1;
-    private GoogleApiClient mGoogleApiClient;
-    FirebaseUser user;
     private FirebaseAuth mAuth;
-    private FirebaseAuth.AuthStateListener mAuthListener;
     private static final String TAG = "LOGIN";
+    EditText etsignin;
+    AutoCompleteTextView etemail;
+    Button btlogin,btsignin;
+    String email,pass;
+    private FirebaseAuth.AuthStateListener mautlistner;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        signinbt = (SignInButton)findViewById(R.id.signinbt);
+        etemail = (AutoCompleteTextView) findViewById(R.id.etemail);
+        btlogin = (Button)findViewById(R.id.btlogin);
+        btsignin = (Button)findViewById(R.id.btsignin);
+        etsignin = (EditText)findViewById(R.id.etsignin);
         mAuth = FirebaseAuth.getInstance();
-        mAuthListener = new FirebaseAuth.AuthStateListener() {
+
+        // Get the string array
+        String[] countries = getResources().getStringArray(R.array.pilani_email);
+// Create the adapter and set it to the AutoCompleteTextView
+        ArrayAdapter<String> adapter =
+                new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, countries);
+        etemail.setAdapter(adapter);
+
+        mautlistner = new FirebaseAuth.AuthStateListener() {
             @Override
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
 
-                user = firebaseAuth.getCurrentUser();
-                if (user != null) {
-//                     User is signed in
-//                    if(user.getEmail().contains("@pilani.bits-pilani.ac.in"))
-//                    {
-                        startActivity(new Intent(Login.this,MainActivity.class));
-                        Toast.makeText(Login.this,user.getEmail(),Toast.LENGTH_LONG).show();
-                        Log.d(TAG, "onAuthStateChanged:signed_in:" + user.getUid());
-//                    }
-//                    else
-//                    {
-//                        Toast.makeText(Login.this,"enter using bits-mail ID",Toast.LENGTH_LONG).show();
-//                        mAuth.signOut();
-//                    }
-
-                } else {
-                    // User is signed out
-                    Log.d(TAG, "onAuthStateChanged:signed_out");
+                if(firebaseAuth.getCurrentUser()!=null){
+                    startActivity(new Intent(Login.this,MainActivity.class));
                 }
-                // ...
 
             }
         };
 
-        // Configure Google Sign In
-        GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
-                .requestIdToken(getString(R.string.default_web_client_id))
-                .requestEmail()
-                .build();
 
-        mGoogleApiClient = new GoogleApiClient.Builder(getApplicationContext())
-                .enableAutoManage(this, new GoogleApiClient.OnConnectionFailedListener() {
-                    @Override
-                    public void onConnectionFailed(@NonNull ConnectionResult connectionResult) {
-
-                        Toast.makeText(Login.this,"connection error",Toast.LENGTH_SHORT).show();
-
-                    }
-                })
-                .addApi(Auth.GOOGLE_SIGN_IN_API,gso)
-                .build();
-
-        signinbt.setOnClickListener(new View.OnClickListener() {
+        btlogin.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                signIn();
+            public void onClick(View v) {
+                email = etemail.getText().toString();
+                pass = "Abhudhay2921234567";
+                if(email.toLowerCase().contains("@pilani.bits-pilani.ac.in"))
+                {
+                    Startsignup();
+                }
+                else
+                {
+                    Toast.makeText(Login.this, "enter bits ID",
+                            Toast.LENGTH_SHORT).show();
+                }
+
+            }
+        });
+
+        btsignin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                email = etsignin.getText().toString();
+                pass = "Abhudhay2921234567";
+                if(email.toLowerCase().contains("@pilani.bits-pilani.ac.in"))
+                {
+                    Startsignin();
+                }
+                else
+                {
+                    Toast.makeText(Login.this, "You r Not registered by this email id",
+                            Toast.LENGTH_SHORT).show();
+                }
 
             }
         });
 
     }
 
-    private void check() {
-
-        if(user.getEmail().contains("@pilani.bits-pilani.ac.in"))
-        {
-
-        }
-        else
-        {
-            Toast.makeText(Login.this,"enter using bits-mail ID",Toast.LENGTH_LONG).show();
-            mAuth.signOut();
-            Auth.GoogleSignInApi.signOut(mGoogleApiClient);
-        }
-    }
-
     @Override
     public void onStart() {
         super.onStart();
-        mAuth.addAuthStateListener(mAuthListener);
-    }
-
-    @Override
-    public void onStop() {
-        super.onStop();
-        if (mAuthListener != null) {
-            mAuth.removeAuthStateListener(mAuthListener);
+        // Check if user is signed in (non-null) and update UI accordingly.
+        FirebaseUser currentUser = mAuth.getCurrentUser();
+        if(currentUser!=null){
+            startActivity(new Intent(Login.this,MainActivity.class));
         }
     }
 
+    private void Startsignin() {
 
-    private void signIn() {
-        Intent signInIntent = Auth.GoogleSignInApi.getSignInIntent(mGoogleApiClient);
-        startActivityForResult(signInIntent, RC_SIGN_IN);
-    }
-
-    @Override
-    public void onActivityResult(int requestCode, int resultCode, Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-
-        // Result returned from launching the Intent from GoogleSignInApi.getSignInIntent(...);
-        if (requestCode == RC_SIGN_IN) {
-            GoogleSignInResult result = Auth.GoogleSignInApi.getSignInResultFromIntent(data);
-            Log.d(TAG, "GoogleSignInResult:" + result);
-            if (result.isSuccess()) {
-                // Google Sign In was successful, authenticate with Firebase
-                GoogleSignInAccount account = result.getSignInAccount();
-                firebaseAuthWithGoogle(account);
-            } else {
-                // Google Sign In failed, update UI appropriately
-                // ...
-            }
-        }
-    }
-
-    private void firebaseAuthWithGoogle(GoogleSignInAccount acct) {
-
-        Log.d(TAG, "firebaseAuthWithGoogle:" + acct.getId());
-
-        AuthCredential credential = GoogleAuthProvider.getCredential(acct.getIdToken(), null);
-        mAuth.signInWithCredential(credential)
+        mAuth.signInWithEmailAndPassword(email, pass)
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
-                        Log.d(TAG, "signInWithCredential:onComplete:" + task.isSuccessful());
-
-                        // If sign in fails, display a message to the user. If sign in succeeds
-                        // the auth state listener will be notified and logic to handle the
-                        // signed in user can be handled in the listener.
-                        if (!task.isSuccessful()) {
-                            Log.w(TAG, "signInWithCredential", task.getException());
-                            Toast.makeText(Login.this, "Authentication failed.",
+                        if (task.isSuccessful()) {
+                            // Sign in success, update UI with the signed-in user's information
+                            Log.d(TAG, "signInWithEmail:success");
+                            FirebaseUser user = mAuth.getCurrentUser();
+                            startActivity(new Intent(Login.this,MainActivity.class));
+                        } else {
+                            // If sign in fails, display a message to the user.
+                            Log.w(TAG, "signInWithEmail:failure", task.getException());
+                            Toast.makeText(Login.this, "You are not registered. please register first",
                                     Toast.LENGTH_SHORT).show();
                         }
+
                         // ...
                     }
                 });
 
+    }
+
+    public void Startsignup(){
+
+        mAuth.createUserWithEmailAndPassword(email, pass)
+                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+                        if (task.isSuccessful()) {
+                            // Sign in success, update UI with the signed-in user's information
+                            Log.d(TAG, "createUserWithEmail:success");
+                            FirebaseUser user = mAuth.getCurrentUser();
+                            startActivity(new Intent(Login.this,MainActivity.class));
+                        } else {
+                            // If sign in fails, display a message to the user.
+                            if (task.getException() instanceof FirebaseAuthUserCollisionException) {
+                                Toast.makeText(Login.this,
+                                        "User with this email already exist. please sign in", Toast.LENGTH_SHORT).show();
+                            }
+                            else {
+                                Log.w(TAG, "createUserWithEmail:failure", task.getException());
+                                Toast.makeText(Login.this, "Connection Error",
+                                        Toast.LENGTH_SHORT).show();
+                            }
+
+                        }
+
+                        // ...
+                    }
+                });
     }
 
 

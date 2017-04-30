@@ -1,8 +1,8 @@
 <resources>
     <string name="app_name">BITS Emergency</string>
     <string name="importantcontactbt">Important\nContacts</string>
-    <string name="complainbt">Complain &amp;\nsuggestion</string>
-    <string name="medcbt">Med. C.\nTimings</string>
+    <string name="complainbt">Women \nHelpline</string>
+    <string name="medcbt">Medical Center\nDetails</string>
     <string name="secembt">Security\nEmergency</string>
     <string name="medembt">Medical\nEmergency</string>
     <string name="title_activity_important__contacts">Important_Contacts</string>
@@ -16,4 +16,10 @@
     <string name="Lockdown_Protocol">Lockdown</string>
     <string name="Fire_Protocol">Fire Emergency</string>
     <string name="Violent_Protocol">Violent/\nSuspicious Act</string>
+
+    <string-array name="pilani_email">
+        <item>\@pilani.bits-pilani.ac.in</item>
+    </string-array>
 </resources>
+
+

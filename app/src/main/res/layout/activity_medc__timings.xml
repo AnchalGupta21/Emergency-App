@@ -22,7 +22,7 @@
             android:id="@+id/android_material_design_spinner2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint=" Summer/Winter Timings"
+            android:hint=" Summer/Winter Timings or Contacts"
             android:textColorHint="#000000"
             app:met_floatingLabel="normal"
             android:gravity="center"
@@ -270,6 +270,61 @@
                         </LinearLayout>
 
                     </ScrollView>
+
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                    xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2dp"
+                    card_view:cardCornerRadius="8dp"
+                    card_view:cardBackgroundColor="#f6f6f6"
+                    android:id="@+id/cardcontacts">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:gravity="center"
+                            android:layout_margin="4dp">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="\nMedical Centre Contacts"
+                                android:textSize="20sp"
+                                android:textColor="#3c3c3c"
+                                android:textAlignment="center"/>
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="\nMedical Superintendent : Dr. R. P. Pareek\n"
+                                android:textSize="18sp"
+                                android:textColor="#3c3c3c"
+                                android:textAlignment="center"/>
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="+91 1596 515 523\n"
+                                android:textSize="18sp"
+                                android:textAlignment="center"
+                                android:id="@+id/pareekno"/>
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Medical Store\n"
+                                android:textSize="18sp"
+                                android:textColor="#3c3c3c"
+                                android:textAlignment="center"/>
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="+91 1596 515 526\n"
+                                android:textSize="18sp"
+                                android:textAlignment="center"
+                                android:id="@+id/medcno"/>
+                        </LinearLayout>
 
                 </android.support.v7.widget.CardView>
 
