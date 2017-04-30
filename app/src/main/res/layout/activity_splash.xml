@@ -22,15 +22,22 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="BITS Emergency App."
-            android:textSize="30sp"
+            android:text="BITS Emergency App.\n"
+            android:textSize="27sp"
             android:gravity="center"/>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="By \n Safety &amp; Medical Advisory Council"
-            android:layout_margin="5dp"
+            android:text="By"
+            android:layout_margin="0dp"
+            android:textSize="20sp"
+            android:gravity="center"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Safety &amp; Medical Advisory Council"
+            android:layout_margin="15dp"
             android:textSize="20sp"
             android:gravity="center"/>
 

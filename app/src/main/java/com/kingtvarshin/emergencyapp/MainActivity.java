@@ -143,7 +143,10 @@ public class MainActivity extends AppCompatActivity {
         int id = item.getItemId();
 
         if (id == R.id.action_credits) {
-            startActivity(new Intent(MainActivity.this,Complain_Suggestions.class));
+            Intent emailintent1 = new Intent(Intent.ACTION_SEND);
+            emailintent1.putExtra(Intent.EXTRA_EMAIL, new String[] {"smac.bitspilani@gmail.com"});
+            emailintent1.setType("message/rfc882");
+            startActivity(Intent.createChooser(emailintent1, "Email"));
             return true;
         }
 

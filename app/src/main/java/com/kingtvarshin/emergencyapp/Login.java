@@ -6,6 +6,7 @@ import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.KeyEvent;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
@@ -92,7 +93,7 @@ public class Login extends AppCompatActivity {
                 }
                 else
                 {
-                    Toast.makeText(Login.this, "You r Not registered by this email id",
+                    Toast.makeText(Login.this, "You are Not registered by this email id",
                             Toast.LENGTH_SHORT).show();
                 }
 
@@ -150,7 +151,7 @@ public class Login extends AppCompatActivity {
                             // If sign in fails, display a message to the user.
                             if (task.getException() instanceof FirebaseAuthUserCollisionException) {
                                 Toast.makeText(Login.this,
-                                        "User with this email already exist. please sign in", Toast.LENGTH_SHORT).show();
+                                        "User with this email already exist. \nplease sign in", Toast.LENGTH_SHORT).show();
                             }
                             else {
                                 Log.w(TAG, "createUserWithEmail:failure", task.getException());

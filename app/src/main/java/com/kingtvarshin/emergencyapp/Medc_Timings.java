@@ -34,7 +34,7 @@ public class Medc_Timings extends AppCompatActivity {
         pareekno = (TextView)findViewById(R.id.pareekno);
         medcno = (TextView)findViewById(R.id.medcno);
 
-        String[] SPINNERLIST = {"Summer","Winter","Contacts"};
+        String[] SPINNERLIST = {"Summer Timings","Winter Timings","Contacts"};
         ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(this,
                 android.R.layout.simple_dropdown_item_1line, SPINNERLIST);
         MaterialBetterSpinner materialDesignSpinner = (MaterialBetterSpinner)

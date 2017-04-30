@@ -26,7 +26,6 @@
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
-        <activity android:name=".Complain_Suggestions" />
         <activity android:name=".Medc_Timings" />
         <activity android:name=".Important_Contacts" />
         <activity android:name=".Credits" />

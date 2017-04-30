@@ -52,7 +52,7 @@ public class Protocol extends AppCompatActivity {
 
         if(newString.equals("fire"))
         {
-            setTitle("Fire Protocol");
+            setTitle("Fire Protocols");
             protocol = new ArrayList<>();
             protocol.add("1. Click the emergency Button below.");
             protocol.add("2. Activate the fire alarm.");
@@ -62,7 +62,7 @@ public class Protocol extends AppCompatActivity {
         }
         else if (newString.equals("medical"))
         {
-            setTitle("Medical Protocol");
+            setTitle("Medical Protocols");
             protocol = new ArrayList<>();
             protocol.add("1. Click the emergency Button below.");
             protocol.add("2. Remain calm and follow the directions given by campus security.");
@@ -71,7 +71,7 @@ public class Protocol extends AppCompatActivity {
         }
         else if (newString.equals("violent"))
         {
-            setTitle("Violent Protocol");
+            setTitle("Violent Protocols");
             protocol = new ArrayList<>();
             protocol.add("1. Click the emergency Button below.");
             protocol.add("2. Describe the location & details of the incident.");
@@ -79,7 +79,7 @@ public class Protocol extends AppCompatActivity {
         }
         else if (newString.equals("lockdown"))
         {
-            setTitle("Lockdown Protocol");
+            setTitle("Lockdown Protocols");
             protocol = new ArrayList<>();
             protocol.add("1. Click the emergency Button below.");
             protocol.add("2. Remain calm and follow the directions given by campus security.");
